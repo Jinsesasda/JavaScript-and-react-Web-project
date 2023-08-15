@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Catalog Inquiry</title>
+    <link rel="stylesheet" href="style.css" title="MainStyle" />
+</head>
+
+    
+<body>
+    <div id="backgroundimage">
+        <h1><span><u>Catalog Inquiry</u></span></h1>
+        <div id ="border">
+        <form action ="http://rasevic.io/scripts/catalogInquiry.php" method = "get">
+            
+            <div class ="line"> <u>Item catagory</u> <input list="ice-cream-flavors" id="ice-cream-choice" name="item-choice" required autofocus/></div>
+            <datalist id="ice-cream-flavors">
+                <option value="clothes">
+                <option value="books">
+                <option value="music">
+                <option value="food">
+                <option value="other">
+            </datalist>
+
+           
+            <div class ="line">
+                <u>Maximum Cost ($)</u>
+                <input class="maximum" type = "number" max="1000" min="1" step ="5" value ="1" name ="maximumCost"> </div>
+             <br>
+            <div class ="line_make"> 
+                <label class="checkbox"><input type="checkbox"  name="availableOnCampus"/><u>Available on Campus</u></label></div>
+           
+            <div class ="line_make"> <label class="checkbox"><input type="checkbox" name="availableOnline" checked/><u>Available Online</u></label></div>
+            
+            <div class ="line_make">  <label><u>Additional Information</u> <textarea rows="10" name="info" cols="100"></textarea></label> </div>
+            
+            <div class ="line"> <label><u>Contact Email Address:</u> <input type="email" size ="30" name="email" placeholder="example@terpmail.umd.edu"></label> </div>
+           
+            <div class ="line">  <input type="submit" id="submit_reset" value ="Submit Inquiry">  <input type="reset" id ="reset" value="Clear"></div> 
+
+                             
+        </form>
+        </div>
+          
+          <!--#include virtual="footer.shtml" --> 
+        <footer>
+            <div>
+                <a href="index.shtml">&copy; Terp Store (Serving College Park Since 1991)</a>
+            </div>
+        </footer>
+        
+        </div>
+        
+
+         
+    
+
+</body>
+
+
+</html>

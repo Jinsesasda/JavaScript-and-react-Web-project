@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    <title>Research Institute</title>
+    <link rel="stylesheet" href="./stylesheets/researchForm.css" />
+    <script src="./javascripts/researchFormValidation.js"></script>
+  </head>
+
+
+	<body>
+    <header>
+      <div id ="title">
+      <h1><hr>Research Form</hr></h1>
+      </div>
+
+    </header>
+    <section>
+      
+      <body>
+          
+               
+                      <form action = "http://localhost:3000/processForm" method ="post">
+                        <fieldset>
+                        <legend><b>General Information</b></legend>
+                    
+                      <div>
+                      FirstName: <input class="firstname" type="text" name="firstname" required />
+                      Last Name: <input class ="lastname" type="text" name="lastname" required />
+                      <br>
+                      Phone: <input class="phoneFirstPart" type="text" name="phoneFirstPart" required minlength="3" maxlength="3" size="3" /> - 
+                      <input class="phoneSecondPart" type="text" name="phoneSecondPart" required minlength="3" maxlength="3" size="3" />
+                       - <input class="phoneThirdPart" type="text" name="phoneThirdPart" required minlength="4" maxlength="4" size="4" /> 
+                       Email: <input class="email" type="email" name="email" required size="60" /> 
+                  </fieldset>
+                  <fieldset>
+                    <legend><b>Research Study Data<b></legend>
+
+                  <fieldset>  
+                   <legend><b>Age/Height/Weight</b></legend>
+                    <b>Age:</b> <input class="age" type="number" name="age" size="3" min="1" max="125" /> 
+                    &nbsp;&nbsp;<b>Height:</b> <input id="heightFeet" type="number" name="heightFeet" size="2" min="2" max="7" />
+                     <em>Feet</em> <input class="heightInches" type="number" name="heightInches" size="3" min="0" max="11" />
+                      <em>Inches</em> &nbsp;&nbsp;&nbsp;&nbsp;<b>Weight: </b> <input id="weight" type="number" name="weight" size="3" min="1" max="600" />
+
+                </fieldset>
+                  <fieldset>
+                      <legend><b>conditions</b></legend>
+                      Which of the following conditions are present in your failly?(Check all that apply) <br>
+                      <input class="highBloodPressure" type="checkbox" name = "highBloodPressure" value ="highBloodPressure" />
+                      <label> High Blood Pressure</label>
+                      <input class="diabetes" type="checkbox" name ="diabetes" value="diabetes" />
+                      <label> Diabetes</label>
+                      <input class="glaucoma" type="checkbox" name="glaucoma" value="glaucoma" />
+                      <label> Glaucoma</label>
+                      <input class="asthma" type="checkbox" name="asthma" value="asthma" />
+                      <label> Asthma</label>
+                      <input class="none" type="checkbox" name="none" value="none" />
+                      <label> None</label>
+                                                    
+                  </fieldset>
+                  <fieldset>
+                    <legend><b>Time Period</b></legend>
+                  
+                    How long have you experienced any of the above conditions?<br>
+                    <input class="never" type="radio" name="period" value="Never" /> 
+                   <label>Never</label> 
+                     <input class="lessthanayear" type="radio" name="period" value="LessThanAYear"> 
+                    <label>Less than a year<label>
+                     <input class="onetotwo" type="radio" name="period" value="OneToTwoYears" /> 
+                    <label> One to two years </label>
+                    <input class="morethantwo" type="radio" name="period" value="MoreThanTwoYears" />
+                    <label>More than two years</label>
+                </fieldset>
+
+
+                  <fieldset>
+                      <legend><b>Study Information</b></legend>
+                      Which study are you taking part of?
+                      <select name="studyType" class="studyType">
+                        <option selected>Long Term</option>
+                        <option>Short Term</option>
+                      
+                      </select>
+                    Assigned Study Id: 
+                    <input class="firstFourDigits" type="text" name="firstFourDigits" required minlength="4" maxlength="4" size="4" placeholder="A777" required />
+                    -<input class="secondFourDigits" type="text" name="secondFourDigits" required minlength="4" maxlength="4" size="4" placeholder="B888" required />
+                
+                      
+                  </fieldset>
+              
+
+                  
+                  <fieldset>
+                    <legend><b>Additional Information(Commnets)</b></legend>
+                    <textarea class ="comments" name ="comments" rows="5" cols="70"></textarea>
+                    
+                </fieldset>
+              </fieldset>
+              <br>
+              <fieldset>
+                <input class ="reset" type ="reset" value="clear form"/> 
+                <input class = "submit" type ="submit" value ="Submit Information"/>
+              </fieldset>
+            </form>
+      </body>
+      
+      </html>
+           
+    </section>    
+    <footer>
+      CMSC Research Institute &reg;
+    </footer>
+  </body>
+</html>

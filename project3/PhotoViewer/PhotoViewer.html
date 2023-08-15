@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Photo Viewer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="code.js" defer></script>
+</head>
+
+<body>
+    <div class="first_b">
+        <div class="inside_b">
+            <h1><b><u>Photo Viewer</u></b></h1>
+            <div id="main">
+                <img id="viewing" src="InitialImage.jpg" alt="Inital Image">
+            </div>
+            <fieldset>
+                <legend><b>Loading Data</b></legend>
+                <div>
+                Photo's Folder: <input class="photo_folder" type="text" value="umcp/" name="photo_folder" required />
+                Common Name: <input id ="common_name" type="text" value="college"  name="common_name" required />
+                <br>
+                Start Photo Number: <input id="start_photo" type="text" value="2" name="start_photo" required /> 
+                End Photo Number: <input id="end_photo" type="text" name="end_photo" value="4" required /><br>
+                <input class="load" type="button" value="Load" />
+            </fieldset>
+            <fieldset>
+                <legend><b>Iterating</b></legend>
+                <input class="previous" type="button" value="Previous Photo" />
+                <input class="next" type="button" value="Next Photo" />
+                <input class="first_photo" type="button" value="First Photo" />
+                <input class="last" type="button" value="Last Photo" />
+            </fieldset>
+            <fieldset>
+                <legend><b>SlideShows</b></legend>
+                <input class="slide" type="button" value="SlideShow" />
+                <input class="random" type="button" value="RandomSlideShow" />
+                <input class="stop" type="button" value="StopSlideShow" />
+            </fieldset>
+            <fieldset>
+                <legend><b>Status</b></legend>
+                Photo Being Displayed: <input id="photo_display" type="text" name="folder" placeholder="InitialImage.jpg" readonly>
+                <!--I think I need to use article because this has independent element but i used div because it works same-->
+                <div id="meg">
+                    Photo Viewer System
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</body>
+
+</html>

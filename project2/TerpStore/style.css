@@ -1,0 +1,138 @@
+#backgroundimage{
+    border-style: solid;
+   
+    border-color: green;
+   
+    border-width: 0.5em;
+    background-image: url("images/JimHenson.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: 70rem;
+    width: 100rem;
+    position:relative;
+/*    padding: 1em;*/
+
+}
+
+.checkbox input:checked {
+    border-color: red;
+    background-color:red;
+}
+footer{
+    position:absolute;
+    bottom:0;
+    border:solid;
+    border-color:powderblue;
+    border-width: 2em;
+    text-align: center;
+    height:5em;
+    width:96em;
+    background-color: red;
+    
+}
+a{
+    
+    font-size:3em;
+    color:white
+}
+
+
+
+#border{
+    box-sizing: content-box;
+    width: 45%;
+    margin-left: 5em; 
+    border-style: solid;
+    border-color: azure;
+    border-width: 0.5em;
+    padding-bottom: 3em;
+    
+    background-color: rgba(255, 255, 255, 0.85)
+}
+#submit_reset{
+    border-style: solid;
+    border-color: black;
+    border-radius: 0.4em;
+    border-width: thin;
+    box-sizing: content-box;
+    width: 14%;
+    padding-bottom: 1em;
+    padding-top:1em;
+    margin-left: 1em;
+}
+#reset{
+    border-style: solid;
+    border-color: black;
+    border-radius: 0.4em;
+    border-width: thin;
+    box-sizing: content-box;
+    width: 14%;
+    padding-bottom: 1em;
+    padding-top:1em;
+    margin-left: 1em;
+}
+
+.line{
+    margin-top: 1.5em;
+    margin-left: 1em;
+}
+.line_make{
+    margin-top:0.25em;
+    margin-left: 0.7em;
+}
+#catagory a:link{
+    color: brown;
+  
+}
+#catagory a:visited{
+    color: beige;
+    background-color: none;
+}
+#catagory a:hover{
+    
+    font-size: 2em;
+}
+
+a:hover{
+  font-size: 2.5em;
+}
+
+
+#catagory{
+    font-size:1.5em;
+    display: inline-block;
+}
+
+#text_background{
+    width: 25em;
+    height: 8em;
+    border-style: solid;
+    border-color: black;
+    background-color: rgb(211,211,211, 0.8);
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-left: 10em;
+    margin-top:8em;
+}
+h1{ color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.25rem;
+   
+    margin-left: 5px;
+    margin-top: 5px;
+}
+span{
+    color: azure ;
+    background-color: rgba(0, 0, 0, .4);
+    font-size: 2em;
+    
+}
+
+
+/*
+div {
+    border: .5em solid lightblue;
+    padding-left: .5em;
+}
+*/

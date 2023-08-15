@@ -1,0 +1,50 @@
+<!doctype html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="utf-8" /> 
+    <title>Placing Order</title> 
+    <link rel="stylesheet" href="style.css" title="MainStyle" /> 
+</head> 
+ 
+ 
+<body> 
+    <div id="backgroundimage">
+        <h1><span><u>Placing Order</u></span></h1>
+        <div id ="border">
+      
+             
+        
+            <form action="http://rasevic.io/scripts/catalogInquiry.php" method="post"> 
+                   <div class ="line">
+                <label><u>Item Serial #</u> <input class="serial" type="text" name="serialNumber" placeholder="umd-item-0000" required autofocus/><br> </label></div> 
+                   <div class ="line"> 
+                 <u>Credit Card #</u> <input type="text" size="2" name="cc1" maxlength="4" required/> - <input type="text" name="cc2" size="2" maxlength="4" required/> - <input type="text" name="cc3" size="2" maxlength="4" required/> - <input type="text" name="cc4" size="2" maxlength="4" required/><br> </div>
+                 <div class ="line"> 
+                 <label><u>Shipping Address</u> <input class="email" type="text" name="shipping" maxlength="80" required/></label><br> 
+                 </div>
+                 <div class ="line"> 
+                 <label><u>Contanct Email Address</u> <input class="email" type="email" name="email" size="30" placeholder="example@terpmail.umd.edu"/></label> <br>
+                 </div>
+                 <div class ="line"> 
+                    
+                <input class="submit_reset" type="submit" value="Submit Order" /> <input class="submit_reset" type="reset" value="Clear" /> 
+                
+                 </div>
+            
+            </form> 
+       
+    </div> 
+   <!--#include virtual="footer.shtml" -->
+   <footer>
+    <div>
+        <a href="index.shtml">&copy; Terp Store (Serving College Park Since 1991)</a>
+    </div>
+</footer>
+
+        
+    </div> 
+ 
+</body> 
+ 
+</html>

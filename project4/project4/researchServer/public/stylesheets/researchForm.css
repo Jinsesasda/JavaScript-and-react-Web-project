@@ -1,0 +1,22 @@
+/* place your css style definitions here 
+ Here is a link to a great reference for learning and 
+ experimenting with css:
+https://www.w3schools.com/css/default.asp
+*/
+legend {
+    color : #A0522D;
+   
+}
+#title{
+    text-decoration: underline;
+    text-shadow: 2px 2px;
+}
+
+fieldset{
+   
+  
+  border: 1px solid #666;
+  border-radius: 8px;
+
+  
+}

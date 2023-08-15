@@ -1,0 +1,71 @@
+.font{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+body{
+    background-color: blanchedalmond;
+}
+#margining{
+    margin: 5rem;
+    margin-top: 3rem;
+}
+.textEdit{
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
+    font-size: 2rem;
+}
+.text{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    
+}
+
+#center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subsub{
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
+    font-size: 1.25rem;
+}
+
+table,
+td,
+th {
+    border: .125rem solid gray;
+    font-size: 1.25rem;
+}
+.TextSize{
+    margin-left: 10rem;
+ 
+   font-size: 3rem; 
+}
+th{
+    background-color:antiquewhite;
+    color: brown;
+}
+.picSize{
+    height: 17rem;
+    width: auto;  
+}
+table caption {
+    color: blue;
+}
+.image{
+    width: 16rem;
+}
+
+.fav{
+    width: 1rem;
+}
+.sizeOftext{
+    
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
+    font-size: 2rem;
+
+}

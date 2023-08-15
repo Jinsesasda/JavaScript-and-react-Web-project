@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Project #2 (Terp Store)</title>
+    <meta charset="utf-8" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        a:link {
+            text-decoration: underline;
+        }
+
+        .h2,
+        .h3,
+        .h4,
+        .h5 {
+            text-decoration: underline;
+        }
+
+        .MyListStyle {
+            list-style-type: lower-latin;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1 id="main" class="h2">CMSC335 Summer 2022</h1>
+
+        <div class="h3">Project #2, Terp Store (Due Friday, June 17th, 11:55 pm)</div>
+
+        <div class="h4">Objectives</div>
+        <p>
+            To practice web servers, forms, and http post/get.
+        </p>
+
+        <div class="h4">Academic Integrity</div>
+        <p>
+            Please make sure you read the academic integrity section of the syllabus so you understand what is permissible in our programming projects. Any case of academic dishonesty will be referred to the <a href="https://www.studentconduct.umd.edu/">University's Office of
+                Student Conduct</a>. Please don't post your code online where others can see your code.
+        </p>
+
+        <div class="h4">Overview</div>
+        <p>
+            For this project you will implement a system called "Terp Store." The system allows users to inquire about store items and to submit orders. You will define two forms for users to
+            submit data. A video showing some of the system functionality can be found at
+            <a href="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cd1d6716-acc8-4e81-9c42-ae4400eea998">Application Video</a>. Feel free to answer project questions in Piazza if you know the answer to them; we welcome those answers.
+        </p>
+
+        <div class="h4">Grading</div>
+        <ul>
+            <li>(10%) Index Page</li>
+            <li>(45%) Catalog Inquiry Page</li>
+            <li>(45%) Placing Order Page</li>
+        </ul>
+
+        <div class="h4">Code Distribution</div>
+        <p>
+
+        <p>The project's code distribution is available at the directory projects/projects2/TerpStore inside
+            of your repo (after you have pulled in the changes from upstream). The contents of the TerpStore directory
+            are as follows:
+        </p>
+        <ol>
+            <li><strong>index.shtml</strong> - This is the main page of the application with links to
+                the catalogInquiry.shtml and the placingOrder.shtml pages.
+            </li>
+            <li><strong>catalogInquiry.shtml</strong> - This page includes a form for users to ask
+                for items' information.</li>
+            <li><strong>placingOrder.shtml</strong> - This page includes a form that allow users to submit
+                an item's order.</li>
+            <li><strong>footer.shtml</strong> - This is a footer that you must include in the other pages
+                using a server side include directive.</li>
+            <li><strong>style.css</strong> - All style information will be present in this file.</li>
+            <li><strong>images</strong> - A folder for images.</li>
+        </ol>
+
+        <div class="h4">Specifications/Requirements</div>
+        <h2 class="h5">index.shtml Page</h2>
+        <p>
+            The <strong>index.shtml</strong> page represents the application's main page. It will have
+            a link to the <strong>catalogInquiry.shtml</strong> page and a link to the
+            <strong>placingOrder.shtml</strong> page.
+            Define HTML and CSS to recreate the page you see in the image
+            <a href="images/indexPageImage.png">Index Page Image</a>. As long as the page looks
+            close to what you see in the image, you are OK (it does not need to be exact). The requirements
+            for the this page are:
+        </p>
+
+        <ol>
+            <li>The title (to be used with &lt;title&gt; tag) for the page
+                will be "Terp Store."</li>
+            <li>Implement the CSS in the <strong>style.css</strong> file. You may use any css units (rem,
+                etc.).</li>
+            <li>Do not add CSS to the HTML file at all (if you do, you will lose credit).</li>
+            <li>The page should have a green border and use the JimHenson.jpg image as background.</li>
+            <li>The "Terp Store" header will have an <strong>azure</strong> color and a 
+                background color defined by rgba(0, 0, 0, .4).</li>
+            <li>The links to the other two pages will appear in the middle of the page. The first
+                link will be for the catalog inquiry page and the second for the order page. The
+                links will appear in a container with a background color corresponding to
+                rgb(211,211,211, 0.8). The color of the links before they are selected will
+                be <strong>brown</strong>, and <strong>beige</strong> once a link has been visited.
+                When you hover over any of the links, the size of the link should decrease.
+            </li>
+            <li>
+                Using the server side include directive #include, include the footer.shtml we provided.
+                <strong>You may not modify this file at all.</strong> Use css to generate the style
+                you see for the footer.
+            </li>
+            <li>When a user hovers over the footer link, the size of the link should decrease.</li>
+        </ol>
+
+        <h2 class="h5">catalogInquiry.shtml Page</h2>
+        <p>
+            The <strong>catalogInquiry.shtml</strong> page allow users to submit a store inquiry.
+            Define HTML and CSS to recreate the page you see in the image
+            <a href="images/catalogInquiryPageImage.png">Catalog Inquiry Page Image</a>. As long
+            as the page looks close to what you see in the image, you are OK (it does not need to be exact). The requirements for the this page are:
+        </p>
+
+        <ol>
+            <li>The title (to be used with &lt;title&gt; tag) for the page
+                will be "Catalog Inquiry."</li>
+            <li>Implement the CSS in the <strong>style.css</strong> file. You can use any css units (rem,
+                etc.).</li>
+            <li>Do not add CSS to the HTML file at all (if you do, you will lose credit).</li>
+            <li>The page should have a green border and use the JimHenson.jpg image as background.</li>
+            <li>The "Catalog Inquiry" header will have an <strong>azure</strong> color and a 
+                background color defined by rgba(0, 0, 0, .4).</li>
+            <li>
+                Using the server side include directive #include, include the footer.shtml we provided.
+                <strong>You may not modify this file at all.</strong> Use css to generate the style
+                you see for the footer.
+            </li>
+            <li>When a user hovers over the footer link, the size of the link should decrease.</li>
+            <li>Define a form with the elements specified below.
+                <ol class="MyListStyle">
+                    <li>The form will send data to the
+                        <strong>http://rasevic.io/scripts/catalogInquiry.php</strong> script using "get".
+                    </li>
+                    <li>An element that will allow users to enter a choice or pick
+                        one from <strong>clothes, books, music, food, other</strong>. <strong>This field is a required field and it must have the focus.</strong> The name attribute
+                        value will be "item-choice".
+                    </li>
+                    <li>An element that will allow users to select a number between one (inclusive) and
+                        a 1000 (inclusive). The step for this element will be five and the default value 
+                        one. The name attribute value will be "maximumCost".
+                    </li>
+                    <li>A checkbox element that allow us to specify whether an item is available
+                        on campus. The name attribute value will be "availableOnCampus".</li>
+                    <li>A checkbox element that allow us to specify whether an item is available
+                        online. <strong>This checkbox is checked by default.</strong>
+                        The name attribute value will be "availableOnline".
+                    </li>
+                    <li>A text area where additional information can be provided.
+                        The name attribute value will be "info".
+                    </li>
+                    <li>An email field that has "example@terpmail.umd.edu" as placeholder.
+                        The name attribute value will be "email".
+                    </li>
+                    <li>A <strong>submit</strong> button with the text "Submit Inquiry".</li>
+                    <li>A <strong>reset</strong> button with the text "Clear".</li>
+                </ol>
+            </li>
+            <li>The form will be in a container with the background color rgba(255, 255, 255, 0.85) and
+                a border in azure color.</li>
+        </ol>
+
+        <h2 class="h5">placingOrder.shtml Page</h2>
+        <p>
+            The <strong>placingOrder.shtml</strong> page allow users to submit an order.
+            Define HTML and CSS to recreate the page you see in the image
+            <a href="images/placingOrderPageImage.png">Placing Order Page Image</a>. As long
+            as the page looks close to what you see in the image, you are OK (it does not need to be exact). The requirements for the this page are:
+        </p>
+
+        <ol>
+            <li>The title (to be used with &lt;title&gt; tag) for the page
+                will be "Placing Order."</li>
+            <li>Implement the CSS in the <strong>style.css</strong> file. You can use any css units (rem,
+                etc.).</li>
+            <li>Do not add CSS to the HTML file at all (if you do, you will lose credit).</li>
+            <li>The page should have a green border and use the JimHenson.jpg page as background.</li>
+            <li>The "Placing Order" header will have an <strong>azure</strong> color and a 
+                background color defined by rgba(0, 0, 0, .4).</li>
+            <li>
+                Using the server side include directive #include, include the footer.shtml we provided.
+                <strong>You may not modify this file at all.</strong> Use css to generate the style
+                you see for the footer.
+            </li>
+            <li>When a user hovers over the footer link, the size of the link should decrease.</li>
+            <li>Define a form with the elements specified below.
+                <ol class="MyListStyle">
+                    <li>The form will send data to the
+                        <strong>http://rasevic.io/scripts/catalogInquiry.php</strong> script using "post".
+                    </li>
+                    <li>An element that will allow users to enter an item's serial number.
+                        <strong>This field is a required field and it must have the focus.</strong>
+                        The field will have a placeholder value of "umd-item-0000".
+                        The name attribute value will be "serialNumber".
+                    </li>
+                    <li>Four elements that will allow users to enter a credit card number.
+                        Each field will allow a maximum of 4 characters to be entered. Each field is
+                        required. The name attribute for each element wil be cc1, cc2, cc3, cc4, respectively.
+                    </li>
+                    <li>An element that will allow users to enter an address. This field is required and has a maximum length of 80 characters. The name attribute value will be "shipping".</li>
+                    
+                    <li>An email field that has "example@terpmail.umd.edu" as placeholder.
+                        The name attribute value will be "email".
+                    </li>
+                    <li>A <strong>submit</strong> button with the text "Submit Order".</li>
+                    <li>A <strong>reset</strong> button with the text "Clear".</li>
+                </ol>
+            </li>
+            <li>The form will be in a container with the background color rgba(255, 255, 255, 0.85) and
+                a border in azure color.</li>
+        </ol>
+
+        <h2 class="h5">Other Specifications</h2>
+        <ul>
+            <li>You may not use any authoring tool (e.g., Dreamweaver, etc.)
+                that generates the HTML/CSS/JavaScript code for you.
+            </li>
+            <li>You may not use Bootstrap, jQuery, React, or any other type of library/framework.</li>
+            <li>You must implement this project by yourself.</li>
+            <li>Make sure you view your code using Chrome (that is the browser we will use to grade your 
+                project).
+            </li>
+            <li>
+                You can use any HTML/CSS code we have provided in lecture examples.
+            </li>
+            <li>You will lose credit if your HTML does not validate according to the
+                <a href="https://validator.w3.org/">HTML Validator (https://validator.w3.org/)</a>
+            </li>
+            <li>You do not need to validate your CSS although it is recommended.</li>
+            <li>You do not need to have a web server running locally to run the application but it is recommended
+                that you run <strong>npx http-server</strong> inside of the TerpStore directory and view your application
+                that way.
+            </li>
+        </ul>
+
+        <div class="h4">Submission</div>
+        <ul>
+            <li>To submit your project, make sure your commit your changes locally and push to your gitlab
+                repo (git push origin main).
+            </li>
+            <li><strong>Make sure that after pushing your work, you login to gitlab.cs.umd.edu and verify that
+                your changes are there. </strong>
+            </li>
+        </ul>
+
+        <a href="https://www.umd.edu/web-accessibility/">Web Accessibility</a>
+        <hr>
+    </div>
+
+    <script src="bootstrap/jquery-3.2.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body></html>

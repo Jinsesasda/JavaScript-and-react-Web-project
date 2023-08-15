@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Project #3 (PhotoViewer)</title>
+    <meta charset="utf-8" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        a:link {
+            text-decoration: underline;
+        }
+
+        .h2,
+        .h3,
+        .h4,
+        .h5 {
+            text-decoration: underline;
+        }
+
+        .MyListStyle {
+            list-style-type: lower-latin;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1 id="main" class="h2">CMSC335 Summer 2022</h1>
+
+        <div class="h3">Project #3, PhotoViewer (Due Wednesday June 29th, 11:55 pm)</div>
+
+        <div class="h4">Objectives</div>
+        <p>
+            To practice event handling.
+        </p>
+
+        <div class="h4">Academic Integrity</div>
+        <p>
+            Please make sure you read the academic integrity section of the syllabus so you understand what is permissible in our programming projects. Any case of academic dishonesty will be referred to the <a href="https://www.studentconduct.umd.edu/">University's Office of
+                Student Conduct</a>. Please don't post your code online where others can see your code.
+        </p>
+
+        <div class="h4">Overview</div>
+        <p>
+            For this project you will implement a photo viewer that allows you to look at
+            photos available in a folder. A video illustrating some of functionality of the
+            application can be found at <a href="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=83d22823-9dcb-4b2c-98b4-ae540145f719">Photo Viewer Video</a>.
+        </p>
+
+        <div class="h4">Grading</div>
+        <ul>
+            <li>(18%) Form elements (Text fields (4%), buttons (8%), fieldset areas (4%), image area (1%),
+                (Photo Being Displayed disabled text field (1%)))</li>
+            <li>(6%) Style
+                <ul>
+                    <li>(3%) Border colors (brown border(1%), cornsilk-color border(1%), black border around image(1%)).</li>
+                    <li>(2%) Background colors (silver for main page(1%)) and white for inner page(1%)).</li>
+                    <li>(1%) Shadow for buttons.</li>
+                </ul>
+            </li>
+            <li>(2%) Arrow (lambda) function requirement.</li>
+            <li>(2%) document.querySelector() requirement.</li>
+            <li>(3%) All JavaScript code in code.js file.</li>
+            <li>(3%) All CSS code in style.css file.</li>
+            <li>(66%) System's functionality.</li>
+        </ul>
+
+        <p>
+            The project's code distribution is available at the directory projects/project3/PhotoViewer inside
+            of your repo (after you have pulled in the changes from upstream). The contents of the PhotoViewer directory
+            are as follows:
+        </p>
+        <ol>
+            <li><strong>PhotoViewer.html</strong> - This is the main page of the application.</li>
+            <li><strong>code.js</strong> - This file includes all the JavaScript.</li>
+            <li><strong>style.css</strong> - This file includes all the css.</li>
+            <li><strong>umcp</strong> - Folder with images.</li>
+        </ol>
+
+        <div class="h4">Specifications/Requirements</div>
+        <ol>
+            <li>When the "Load Photos" button is selected, photos in the range defined by the "Start Photo Number" and "End Photo Number" can be displayed. Your code should read the folder name, common name, start photo number, and end photo number. Based on the previous information, your code can create an array with the names of the photos that belong to the specified range. Each photo's name consists of the folder name, followed by the common name, the photo's number, and the ".jpg" extension. You can assume only .jpg files will be provided. Notice you don't need to add "/" (it is assumed the folder name will provide it).
+            </li>
+
+            <li>After loading data, the message "Photo Viewer System" should be displayed in a &lt;div&gt; that is in the "Status" fieldset area. This message should be displayed in red color.
+            </li>
+
+            <li>The first photo in the range is displayed when the "First Photo" button is clicked on.</li>
+
+            <li>The last photo in the range is displayed when the "Last Photo" button is clicked on.</li>
+
+            <li>Clicking on the "Next Photo" button displays the next photo. If the last photo in the range is
+                being displayed, selecting the "Next Photo" button will display the first photo.</li>
+
+            <li>Clicking on the "Previous Photo" button displays the previous photo. If the first photo
+                in the range is being displayed, selecting the "Previous Photo" will display the last photo.</li>
+
+            <li>Selecting the "SlideShow" button creates an animation were photos in the specified range are
+                displayed, continuously. The photos will be displayed in the same order defined by the range.
+                For example, if the range is 4 and 6 (assuming an <strong>umcp/</strong> folder and a common name of
+                <strong>college</strong>) the images umcp/college4.jpg, umcp/college5.jpg, umcp/college6.jpg will be continuously displayed in that order.
+            </li>
+
+            <li>Selecting the "RandomSlideShow" button creates an animation were photos in the specified range are
+                displayed, randomly. Any random approach is fine and you don't have to worry if the same
+                photo is displayed twice in a row. Ideally all photos in the range should eventually appear,
+                but if not, that is fine. For example, selecting a random value in the range and displaying
+                the photo associated with that value is fine.
+            </li>
+
+            <li>Selecting the "StopSlideShow" button stops the current animation that is in progress.
+            </li>
+
+            <li>Clicking on the displayed image is equivalent to clicking on the "Next Photo" button (the
+                next image should be displayed when you click on the image currently displayed).
+            </li>
+
+            <li>The name (folder, common name, number, .jpg) of the photo currently being displayed should be
+                rendered in a disabled text field that is in the "Status" fieldset area. The text "Photo Being Displayed: " should preceded the disabled text field. The name of the photo should be displayed
+                for iterations (e.g., clicking on the "Next Photo" button) and for slide shows.
+            </li>
+
+            <li>
+                After reading the start and end photo numbers, your code must check that the end number is larger than or equal to the start number. If that is not the case, the message "Error: Invalid Range" should be display in a &lt;div&gt; that is located in the "Status" fieldset area. This message
+                should be displayed in red color. <strong>You can assume we will always provide numbers
+                    in the "Start Photo Number" and the "End Photo Number" text fields.</strong>
+            </li>
+
+            <li>
+                Iterating (e.g., selecting "Next Photo") or starting a slide show without first loading data
+                is considered an error and the message "Error: you must load data first" should be
+                displayed in the &lt;div&gt; that is in the "Status" fieldset area. This message should be displayed in red color.
+            </li>
+
+            <li>The image "InitialImage.jpg" will be displayed when the page is initially loaded.  The name
+                of this image should appear in the disabled text field.
+            </li>
+            
+            <li>The speed of the slide show animations is one second.</li>
+
+            <li>Using global variables (variables that are not part of any function) is fine. Define as many
+                as you want, but be reasonable about their use (i.e., if something can be solved without a global
+                variable, then don't use it).
+            </li>
+
+            <li>Try to avoid code duplication, but you will not be penalize if you duplicate code.</li>
+
+            <li>Functions requirement
+                <ul>
+                    <li>You can have as many functions as you want.</li>
+                    <li>Your code should rely on at least one arrow (lambda) function.</li>
+                    <li>Your code should use the document.querySelector() method at least once.</li>
+                </ul>
+            </li>
+
+            <li>The PhotoViewer.html file cannot have any JavaScript (only including code.js using the script tag). 
+            </li>
+
+            <li>All your JavaScript code must be in the code.js file.</li>
+            
+            <li>In the code.js file, you can use <strong>window.onload = main;</strong> to call a main() function 
+                that sets the event listeners and performs any other initialization.
+            </li>
+
+            <li>All your css code must be in the style.css file.</li>
+
+            <li>Nelson likes to drink coffee.</li>
+
+            <li>You can assume that if the start photo number is less than or equal to the end photo number,
+                the numbers define a valid range, with valid photos.
+            </li>
+
+            <li>You can assume that all photos in the provided folder have the same common name and have
+                increasing numbers.
+            </li>
+
+            <li>Your code should work for different folders (not just umcp/) and different range values.
+            </li>
+
+            <li>You can assume that users will stop a slide show (using the "StopSlideShow" button)
+                before starting another slide show (random or not).
+            </li>
+            
+            <li>You can assume that after a slide show has been stopped, if the user wants to iterate
+                over the photos, they must select the "Load Photos" button.
+            </li>
+            
+             <li>You can assume that the photo's folder and the common name values will be valid
+                 (i.e., a folder with the specified name exists in the current folder and there are
+                 photos with the specified common name starting at one (e.g., college1.jpg)).
+            </li>
+            
+            <li>
+                <strong>
+                The page does not need to look exactly as show in the video.  As long as it is close
+                you are OK.
+                </strong>
+            </li>
+        </ol>
+
+        <h2 class="h5">Other Specifications</h2>
+        <ul>
+            <li>You may not use any authoring tool (e.g., Dreamweaver, etc.)
+                that generates the HTML/CSS/JavaScript code for you.
+            </li>
+            <li>You may not use Bootstrap, jQuery, React, or any other type of library/framework.</li>
+            <li>You must implement this project by yourself.</li>
+            <li>Make sure you view your code using Chrome (the browser we will use to grade your
+                project).
+            </li>
+            <li>
+                You can use any HTML/CSS code we have provided in lecture examples.
+            </li>
+            <li>
+                You should validate your HTML/CSS, but we will not validate it during grading.
+            </li>
+        </ul>
+
+        <div class="h4">Submission</div>
+        <ul>
+            <li>To submit your project, compress (zip) the folder <strong>PhotoViewer</strong> and
+                upload to the submit server entry "Project #3: PhotoViewer."
+            </li>
+            <li><strong>Make sure that after uploading your work, you download the work and verify
+                you are not missing any files. If you are missing any files, you will be penalized
+                -12 pts.</strong>
+            </li>
+            <li><strong>Read Carefully -
+                As we don't have submit server automatic testing, we will only grade the last 
+                submission you provide. If you provide both an on time and a late submission, 
+                we will only grade the last submission and apply a 12 pts penalty to it.</strong>
+            </li>
+        </ul>
+
+        <a href="https://www.umd.edu/web-accessibility/">Web Accessibility</a>
+        <hr>
+    </div>
+    <script src="bootstrap/jquery-3.2.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

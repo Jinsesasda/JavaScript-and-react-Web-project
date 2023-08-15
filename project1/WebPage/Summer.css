@@ -1,0 +1,157 @@
+/* Do not remove this rule */
+body {
+    
+    margin-left:auto;
+    margin-right:auto;
+    
+    padding: 1rem;
+    border-color: brown;
+    border-width: 0.5rem;
+    border-style: double;
+    width: 60rem;
+    background-color: antiquewhite;
+}
+
+.backgroundColor {
+    
+    padding: 1rem;
+    border-color: blue;
+    border-width: 1rem;
+    border-style: ridge;
+    background-color: white;
+}
+
+
+html {
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+
+
+.title {
+    font-size: 2rem;
+}
+
+
+.sections {
+    font-size: 2rem;
+}
+
+p,
+ol {
+    font-size: 1.25rem;
+}
+
+p:first-letter {
+     font-family: cursive;
+    font-size: 4rem;
+}
+#l{
+ font-size: 1.25rem;
+ color: brown   
+}
+#l:first-letter{
+    color: brown;
+    font-size: 1.25rem
+}
+#secondp:first-letter {
+    font-size: 1.25rem;
+    color: brown;
+}
+#secondp:hover {
+    font-size: 1.25rem;
+    color: brown;
+}
+
+.deptcs {
+    height: 4rem;
+    width: 35.5rem;
+}
+
+table,td,th {
+    border: .125rem solid gray;
+    font-size: 1.25rem;
+}
+
+th{
+    background-color:antiquewhite;
+    color: brown;
+}
+
+table caption {
+    color: blue;
+}
+
+#developed{
+    color: black;
+    font-weight:normal;
+    
+    font-size: 1.25rem
+   
+}
+
+
+#developed:first-letter{
+    color: black;
+    font-weight:normal;
+    font-size: 1.25rem
+}
+
+.colorChange{
+    font-size: 1.5rem;
+    color: grey;
+    display: inline;
+}
+.allRight{
+    font-weight: normal;
+    font-size: 1.25rem;
+    color: black;
+    display: inline;
+    font-family: cursive;
+}
+.weekly{
+    font-size: 1.25rem;
+    color: blue;
+    display: inline;
+    font-family: cursive;
+}
+a:{
+    a:visited
+}
+.csweb {
+    height: 6rem;
+
+}
+
+#center {
+    margin: 3rem;
+}
+
+article p {
+    color: brown;
+}
+p:hover{
+    color: red;
+}
+l:hover{
+    color:red
+}
+
+
+#orderedlist {
+    list-style-type: upper-alpha;
+}
+
+div{
+    
+    font-size: 1.25rem
+}
+.oneLine{
+    display: inline-block;
+}
+#oneLineParent{
+    white-space: nowrap;
+}
+
+

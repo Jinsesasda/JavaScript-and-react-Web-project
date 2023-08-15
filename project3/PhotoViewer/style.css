@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(206, 206, 206);
+}
+
+.first_b {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  
+    border: rgb(153, 37, 37) groove .75rem;
+}
+
+.inside_b {
+    border: rgb(236, 230, 207) ridge .75rem;
+    margin: 15px;
+    background-color: white;
+    padding: 15px
+}
+
+img {
+    margin-left: 15px;
+    border: black solid .25rem;
+    width: 90%;
+
+}
+
+
+
+#load, #prev, #next, #first, #last, #slide, #rand, #stop{
+    box-shadow: .25rem .25rem .1rem rgb(204, 200, 200);
+}
+
+#meg{
+    color: red;
+    font-size: 1.5rem;
+}
+
+

@@ -1,0 +1,89 @@
+CMSC335 Summer 2022
+Project #2, Terp Store (Due Friday, June 17th, 11:55 pm)
+Objectives
+To practice web servers, forms, and http post/get.
+
+Academic Integrity
+Please make sure you read the academic integrity section of the syllabus so you understand what is permissible in our programming projects. Any case of academic dishonesty will be referred to the University's Office of Student Conduct. Please don't post your code online where others can see your code.
+
+Overview
+For this project you will implement a system called "Terp Store." The system allows users to inquire about store items and to submit orders. You will define two forms for users to submit data. A video showing some of the system functionality can be found at Application Video. Feel free to answer project questions in Piazza if you know the answer to them; we welcome those answers.
+
+Grading
+(10%) Index Page
+(45%) Catalog Inquiry Page
+(45%) Placing Order Page
+Code Distribution
+The project's code distribution is available at the directory projects/projects2/TerpStore inside of your repo (after you have pulled in the changes from upstream). The contents of the TerpStore directory are as follows:
+
+index.shtml - This is the main page of the application with links to the catalogInquiry.shtml and the placingOrder.shtml pages.
+catalogInquiry.shtml - This page includes a form for users to ask for items' information.
+placingOrder.shtml - This page includes a form that allow users to submit an item's order.
+footer.shtml - This is a footer that you must include in the other pages using a server side include directive.
+style.css - All style information will be present in this file.
+images - A folder for images.
+Specifications/Requirements
+index.shtml Page
+The index.shtml page represents the application's main page. It will have a link to the catalogInquiry.shtml page and a link to the placingOrder.shtml page. Define HTML and CSS to recreate the page you see in the image Index Page Image. As long as the page looks close to what you see in the image, you are OK (it does not need to be exact). The requirements for the this page are:
+
+The title (to be used with <title> tag) for the page will be "Terp Store."
+Implement the CSS in the style.css file. You may use any css units (rem, etc.).
+Do not add CSS to the HTML file at all (if you do, you will lose credit).
+The page should have a green border and use the JimHenson.jpg image as background.
+The "Terp Store" header will have an azure color and a background color defined by rgba(0, 0, 0, .4).
+The links to the other two pages will appear in the middle of the page. The first link will be for the catalog inquiry page and the second for the order page. The links will appear in a container with a background color corresponding to rgb(211,211,211, 0.8). The color of the links before they are selected will be brown, and beige once a link has been visited. When you hover over any of the links, the size of the link should decrease.
+Using the server side include directive #include, include the footer.shtml we provided. You may not modify this file at all. Use css to generate the style you see for the footer.
+When a user hovers over the footer link, the size of the link should decrease.
+catalogInquiry.shtml Page
+The catalogInquiry.shtml page allow users to submit a store inquiry. Define HTML and CSS to recreate the page you see in the image Catalog Inquiry Page Image. As long as the page looks close to what you see in the image, you are OK (it does not need to be exact). The requirements for the this page are:
+
+The title (to be used with <title> tag) for the page will be "Catalog Inquiry."
+Implement the CSS in the style.css file. You can use any css units (rem, etc.).
+Do not add CSS to the HTML file at all (if you do, you will lose credit).
+The page should have a green border and use the JimHenson.jpg image as background.
+The "Catalog Inquiry" header will have an azure color and a background color defined by rgba(0, 0, 0, .4).
+Using the server side include directive #include, include the footer.shtml we provided. You may not modify this file at all. Use css to generate the style you see for the footer.
+When a user hovers over the footer link, the size of the link should decrease.
+Define a form with the elements specified below.
+The form will send data to the http://rasevic.io/scripts/catalogInquiry.php script using "get".
+An element that will allow users to enter a choice or pick one from clothes, books, music, food, other. This field is a required field and it must have the focus. The name attribute value will be "item-choice".
+An element that will allow users to select a number between one (inclusive) and a 1000 (inclusive). The step for this element will be five and the default value one. The name attribute value will be "maximumCost".
+A checkbox element that allow us to specify whether an item is available on campus. The name attribute value will be "availableOnCampus".
+A checkbox element that allow us to specify whether an item is available online. This checkbox is checked by default. The name attribute value will be "availableOnline".
+A text area where additional information can be provided. The name attribute value will be "info".
+An email field that has "example@terpmail.umd.edu" as placeholder. The name attribute value will be "email".
+A submit button with the text "Submit Inquiry".
+A reset button with the text "Clear".
+The form will be in a container with the background color rgba(255, 255, 255, 0.85) and a border in azure color.
+placingOrder.shtml Page
+The placingOrder.shtml page allow users to submit an order. Define HTML and CSS to recreate the page you see in the image Placing Order Page Image. As long as the page looks close to what you see in the image, you are OK (it does not need to be exact). The requirements for the this page are:
+
+The title (to be used with <title> tag) for the page will be "Placing Order."
+Implement the CSS in the style.css file. You can use any css units (rem, etc.).
+Do not add CSS to the HTML file at all (if you do, you will lose credit).
+The page should have a green border and use the JimHenson.jpg page as background.
+The "Placing Order" header will have an azure color and a background color defined by rgba(0, 0, 0, .4).
+Using the server side include directive #include, include the footer.shtml we provided. You may not modify this file at all. Use css to generate the style you see for the footer.
+When a user hovers over the footer link, the size of the link should decrease.
+Define a form with the elements specified below.
+The form will send data to the http://rasevic.io/scripts/catalogInquiry.php script using "post".
+An element that will allow users to enter an item's serial number. This field is a required field and it must have the focus. The field will have a placeholder value of "umd-item-0000". The name attribute value will be "serialNumber".
+Four elements that will allow users to enter a credit card number. Each field will allow a maximum of 4 characters to be entered. Each field is required. The name attribute for each element wil be cc1, cc2, cc3, cc4, respectively.
+An element that will allow users to enter an address. This field is required and has a maximum length of 80 characters. The name attribute value will be "shipping".
+An email field that has "example@terpmail.umd.edu" as placeholder. The name attribute value will be "email".
+A submit button with the text "Submit Order".
+A reset button with the text "Clear".
+The form will be in a container with the background color rgba(255, 255, 255, 0.85) and a border in azure color.
+Other Specifications
+You may not use any authoring tool (e.g., Dreamweaver, etc.) that generates the HTML/CSS/JavaScript code for you.
+You may not use Bootstrap, jQuery, React, or any other type of library/framework.
+You must implement this project by yourself.
+Make sure you view your code using Chrome (that is the browser we will use to grade your project).
+You can use any HTML/CSS code we have provided in lecture examples.
+You will lose credit if your HTML does not validate according to the HTML Validator (https://validator.w3.org/)
+You do not need to validate your CSS although it is recommended.
+You do not need to have a web server running locally to run the application but it is recommended that you run npx http-server inside of the TerpStore directory and view your application that way.
+Submission
+To submit your project, make sure your commit your changes locally and push to your gitlab repo (git push origin main).
+Make sure that after pushing your work, you login to gitlab.cs.umd.edu and verify that your changes are there.
+Web Accessibility

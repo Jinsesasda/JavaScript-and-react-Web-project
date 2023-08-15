@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head> 
+		<meta charset="utf-8" />
+        <title>Terp Store</title>
+		<link rel="stylesheet" href="style.css" title="MainStyle" />
+	</head> 
+
+    <body>
+        <div id="backgroundimage">
+		<h1><span><u>Terp Store</u></span></h1>
+        <div id = "catagory">
+        <div id = "text_background">
+        <a class = "catagory" href = "catalogInquiry.shtml">Catalog Inquiry</a>
+        <br>
+        <a class ="catagory" href = "placingOrder.shtml">Placing Order</a>
+        </div>
+        </div>
+          <!--#include virtual="footer.shtml" -->
+          <footer>
+            <div>
+                <a href="index.shtml">&copy; Terp Store (Serving College Park Since 1991)</a>
+            </div>
+        </footer>
+        
+          
+
+      
+        
+        </div>
+        
+    </body>
+</html>
